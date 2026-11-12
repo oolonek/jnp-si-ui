@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#001c77">
+  <title>SI Composer · LOTUS</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner"><a class="brand" href="./" aria-label="SI Composer home"><span class="brand-mark">✳</span> LOTUS <span class="brand-light">/ SI Composer</span></a><span class="header-badge">✦ THE SI WORKSTATION ✦</span><a class="header-link" href="https://github.com/lotus-initiative/lotus-manuscript-isnptta/tree/main/si" target="_blank" rel="noopener noreferrer">[ SI SPECIFICATION ↗ ]</a></div>
+  </header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="title">
+      <div class="eyebrow">WELCOME TO THE WORLD WIDE WEB / STRUCTURE · SOURCE · EVIDENCE</div>
+      <h1 id="title">Prepare your Supporting Information.</h1>
+      <p class="lede">One compound–organism occurrence per row. Capture structures and provenance, look up ontology terms, then download a tab-separated table ready for review.</p>
+      <div class="intro-actions"><a class="button button-outline" href="https://lotus-initiative.github.io/lotus-explore-rs/draw/" target="_blank" rel="noopener noreferrer">Draw a structure ↗</a><span>Copy its isomeric SMILES into the field below. Check stereochemistry before submission.</span></div>
+    </section>
+    <section class="workspace" aria-labelledby="workspace-title">
+      <div class="workspace-head"><div><div class="eyebrow">01 / YOUR DATA</div><h2 id="workspace-title">Your compounds <span id="count" class="count">01</span></h2></div><button id="add" type="button" class="button button-dark">+ Add compound</button></div>
+      <p class="workspace-note">Draft saved in this browser only. □ Pin a field to carry its value into new compounds. Ontology searches go to OLS; place searches go to Wikidata. Export a TSV to keep a copy.</p>
+      <div id="notice" role="status" aria-live="polite"></div>
+      <div id="records"></div>
+      <div class="toolbar"><button id="add-bottom" type="button" class="button button-outline">+ Add another compound</button><div class="toolbar-right"><button id="clear" type="button" class="text-button">Clear draft</button><button id="download" type="button" class="button button-accent">Download TSV ↓</button></div></div>
+      <section class="preview" aria-labelledby="preview-title"><div class="preview-title"><span class="eyebrow">02 / LIVE OUTPUT</span><h2 id="preview-title">TSV preview <span class="blink-cursor" aria-hidden="true">_</span></h2><p>Scroll sideways to inspect all 13 columns. This is the exact TSV that Download produces; incomplete rows are shown while drafting.</p></div><pre id="tsv-preview" aria-label="Tab-separated values preview"></pre></section>
+    </section>
+    <aside class="help"><div><div class="eyebrow">03 / BEFORE YOU SUBMIT</div><h2>Review the record.</h2></div><ul><li><strong>Core fields</strong> — Number, name, stereo-complete SMILES and scientific organism name. DOI is optional; <code>lotus curate</code> currently handles name, SMILES, organism and DOI when provided.</li><li><strong>Collection place</strong> — Choose a named Wikidata place (<code>wd:Q…</code>) or set an exact location (<code>geo:lat,lon</code>). Map pins and search queries use external services; review identities and coordinates.</li><li><strong>Context fields</strong> — The remaining columns document provenance for a proposed future curation extension; they are not currently validated by <code>lotus curate</code>.</li></ul></aside>
+  </main>
+  <footer class="site-footer"><div class="shell">© LOTUS SI Composer · Static browser workspace · <a href="https://www.ebi.ac.uk/ols4/" target="_blank" rel="noopener noreferrer">OLS ↗</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors ↗</a></div></footer>
+</body>
+</html>
